@@ -1,0 +1,1390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>Programming Learning Hub</title>
+
+<style>
+
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background:
+        radial-gradient(circle at 10% 10%, #123a70 0%, transparent 30%),
+        radial-gradient(circle at 90% 30%, #321b68 0%, transparent 30%),
+        linear-gradient(135deg, #030b18, #071a35, #0a1028);
+
+    color: white;
+
+    min-height: 100vh;
+
+    overflow-x: hidden;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 18px 7%;
+
+    background: rgba(3, 11, 24, 0.88);
+
+    backdrop-filter: blur(15px);
+
+    border-bottom: 1px solid rgba(100, 180, 255, 0.18);
+}
+
+.logo {
+
+    font-size: 21px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+}
+
+.logo span {
+
+    color: #62c7ff;
+}
+
+nav {
+
+    display: flex;
+
+    gap: 30px;
+}
+
+nav a {
+
+    color: #dbeafe;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+nav a:hover {
+
+    color: #60cfff;
+}
+
+.menu-button {
+
+    display: none;
+
+    background: none;
+
+    border: none;
+
+    color: white;
+
+    font-size: 28px;
+
+    cursor: pointer;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+
+    max-width: 1150px;
+
+    margin: auto;
+
+    min-height: 580px;
+
+    padding: 80px 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 50px;
+}
+
+.hero-content {
+
+    max-width: 650px;
+}
+
+.badge {
+
+    display: inline-block;
+
+    padding: 9px 16px;
+
+    border-radius: 30px;
+
+    background: rgba(48, 156, 255, 0.12);
+
+    border: 1px solid rgba(86, 183, 255, 0.3);
+
+    color: #70d2ff;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+
+    font-size: clamp(40px, 6vw, 72px);
+
+    line-height: 1.05;
+
+    margin-bottom: 22px;
+}
+
+.hero h1 span {
+
+    color: #59c7ff;
+}
+
+.hero p {
+
+    color: #b6c9e3;
+
+    line-height: 1.7;
+
+    font-size: 17px;
+
+    margin-bottom: 30px;
+}
+
+.start-button {
+
+    display: inline-block;
+
+    padding: 15px 25px;
+
+    border-radius: 14px;
+
+    background: linear-gradient(
+        135deg,
+        #168fff,
+        #6b5cff
+    );
+
+    color: white;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    box-shadow:
+        0 10px 35px rgba(0, 130, 255, 0.25);
+
+    transition: 0.3s;
+}
+
+.start-button:hover {
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 15px 40px rgba(0, 160, 255, 0.35);
+}
+
+
+/* Hero graphic */
+
+.hero-graphic {
+
+    width: 310px;
+
+    height: 310px;
+
+    border-radius: 35px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(28, 145, 255, 0.18),
+            rgba(100, 70, 255, 0.15)
+        );
+
+    border: 1px solid rgba(100, 190, 255, 0.3);
+
+    box-shadow:
+        0 20px 70px rgba(0,0,0,0.35);
+
+    animation: float 4s ease-in-out infinite;
+}
+
+.hero-icon {
+
+    font-size: 75px;
+
+    margin-bottom: 15px;
+}
+
+.hero-graphic h2 {
+
+    font-size: 25px;
+}
+
+.hero-graphic p {
+
+    color: #8da9c9;
+
+    margin-top: 8px;
+}
+
+@keyframes float {
+
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+
+/* =========================
+   SECTION
+========================= */
+
+.section {
+
+    max-width: 1150px;
+
+    margin: auto;
+
+    padding: 80px 30px;
+}
+
+.section-heading {
+
+    text-align: center;
+
+    margin-bottom: 45px;
+}
+
+.section-heading .mini {
+
+    color: #62c9ff;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 10px;
+}
+
+.section-heading h2 {
+
+    font-size: clamp(30px, 5vw, 45px);
+}
+
+.section-heading h2 span {
+
+    color: #63c8ff;
+}
+
+.section-heading p {
+
+    color: #9eb4d0;
+
+    margin-top: 12px;
+}
+
+
+/* =========================
+   PDF CARD
+========================= */
+
+.material-card {
+
+    max-width: 850px;
+
+    margin: auto;
+
+    padding: 30px;
+
+    border-radius: 25px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,0.08),
+            rgba(255,255,255,0.035)
+        );
+
+    border: 1px solid rgba(94, 188, 255, 0.25);
+
+    box-shadow:
+        0 20px 60px rgba(0,0,0,0.25);
+}
+
+.material-top {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 22px;
+
+    margin-bottom: 25px;
+}
+
+.pdf-icon {
+
+    width: 75px;
+
+    height: 75px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 20px;
+
+    font-size: 38px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #087cff,
+            #654bff
+        );
+
+    flex-shrink: 0;
+}
+
+.material-info h3 {
+
+    font-size: 24px;
+
+    margin-bottom: 7px;
+}
+
+.material-info p {
+
+    color: #a9bdd7;
+
+    line-height: 1.5;
+}
+
+.topic-tags {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin-top: 12px;
+}
+
+.topic-tag {
+
+    padding: 7px 12px;
+
+    border-radius: 20px;
+
+    background: rgba(70,160,255,0.1);
+
+    border: 1px solid rgba(70,160,255,0.2);
+
+    color: #79cfff;
+
+    font-size: 12px;
+}
+
+.material-buttons {
+
+    display: flex;
+
+    gap: 12px;
+}
+
+.button {
+
+    flex: 1;
+
+    padding: 14px;
+
+    border-radius: 12px;
+
+    border: none;
+
+    text-decoration: none;
+
+    text-align: center;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    font-size: 14px;
+}
+
+.view-pdf {
+
+    background: linear-gradient(
+        135deg,
+        #168fff,
+        #665cff
+    );
+
+    color: white;
+}
+
+.download-pdf {
+
+    background: rgba(255,255,255,0.07);
+
+    color: white;
+
+    border: 1px solid rgba(255,255,255,0.15);
+}
+
+
+/* =========================
+   PDF VIEWER
+========================= */
+
+.pdf-viewer-box {
+
+    display: none;
+
+    margin-top: 25px;
+
+    padding: 15px;
+
+    border-radius: 20px;
+
+    background: rgba(0,0,0,0.35);
+
+    border: 1px solid rgba(100,180,255,0.2);
+}
+
+.viewer-top {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 12px;
+
+    gap: 10px;
+}
+
+.viewer-top h3 {
+
+    font-size: 17px;
+}
+
+.close-button {
+
+    padding: 9px 15px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    background: #ef4444;
+
+    color: white;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.pdf-frame {
+
+    width: 100%;
+
+    height: 650px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: white;
+}
+
+
+/* =========================
+   VIDEO SECTION
+========================= */
+
+.video-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 25px;
+}
+
+.video-card {
+
+    padding: 15px;
+
+    border-radius: 22px;
+
+    background: rgba(255,255,255,0.06);
+
+    border: 1px solid rgba(255,255,255,0.12);
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,0.25);
+}
+
+.video-card iframe {
+
+    width: 100%;
+
+    aspect-ratio: 16 / 9;
+
+    border: none;
+
+    border-radius: 14px;
+
+    display: block;
+}
+
+.video-info {
+
+    padding: 18px 5px 5px;
+}
+
+.video-info h3 {
+
+    font-size: 19px;
+
+    margin-bottom: 8px;
+}
+
+.video-info p {
+
+    color: #9fb2ca;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================
+   TOPIC BOXES
+========================= */
+
+.topic-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 18px;
+}
+
+.topic {
+
+    padding: 23px;
+
+    border-radius: 18px;
+
+    background: rgba(255,255,255,0.055);
+
+    border: 1px solid rgba(90,180,255,0.18);
+
+    transition: 0.3s;
+}
+
+.topic:hover {
+
+    transform: translateY(-5px);
+
+    border-color: #4bbdff;
+}
+
+.topic-number {
+
+    color: #54c7ff;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    margin-bottom: 10px;
+}
+
+.topic h3 {
+
+    margin-bottom: 8px;
+}
+
+.topic p {
+
+    color: #9fb3cd;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+
+    text-align: center;
+
+    padding: 35px 20px;
+
+    color: #8096b3;
+
+    border-top: 1px solid rgba(255,255,255,0.08);
+
+    margin-top: 30px;
+}
+
+footer strong {
+
+    color: #5fc8ff;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 750px) {
+
+    header {
+
+        padding: 15px 5%;
+    }
+
+    .logo {
+
+        font-size: 17px;
+    }
+
+    nav {
+
+        display: none;
+
+        position: absolute;
+
+        top: 70px;
+
+        left: 0;
+
+        width: 100%;
+
+        padding: 20px;
+
+        background: #07162c;
+
+        flex-direction: column;
+
+        text-align: center;
+
+        gap: 20px;
+
+        border-bottom: 1px solid #234;
+    }
+
+    nav.show {
+
+        display: flex;
+    }
+
+    .menu-button {
+
+        display: block;
+    }
+
+    .hero {
+
+        flex-direction: column;
+
+        text-align: center;
+
+        padding: 60px 20px;
+    }
+
+    .hero p {
+
+        font-size: 15px;
+    }
+
+    .hero-graphic {
+
+        width: 230px;
+
+        height: 230px;
+    }
+
+    .hero-icon {
+
+        font-size: 55px;
+    }
+
+    .section {
+
+        padding: 60px 18px;
+    }
+
+    .material-card {
+
+        padding: 20px;
+    }
+
+    .material-top {
+
+        align-items: flex-start;
+    }
+
+    .pdf-icon {
+
+        width: 60px;
+
+        height: 60px;
+
+        font-size: 30px;
+    }
+
+    .material-info h3 {
+
+        font-size: 19px;
+    }
+
+    .material-buttons {
+
+        flex-direction: column;
+    }
+
+    .video-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+    .topic-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+    .pdf-frame {
+
+        height: 500px;
+    }
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header>
+
+    <div class="logo">
+        💻 <span>PROGRAMMING</span>
+    </div>
+
+    <button
+        class="menu-button"
+        onclick="toggleMenu()">
+        ☰
+    </button>
+
+    <nav id="navigation">
+
+        <a href="#home">
+            Home
+        </a>
+
+        <a href="#materials">
+            Materials
+        </a>
+
+        <a href="#videos">
+            Videos
+        </a>
+
+        <a href="#topics">
+            Topics
+        </a>
+
+    </nav>
+
+</header>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <div class="badge">
+            ✨ EDU-TECH LEARNING
+        </div>
+
+        <h1>
+            Learn
+            <span>Programming</span>
+            Smarter
+        </h1>
+
+        <p>
+            Explore programming materials,
+            data structures notes and video lessons
+            in one simple learning website.
+        </p>
+
+        <a
+            href="#materials"
+            class="start-button">
+
+            📚 Start Learning
+
+        </a>
+
+    </div>
+
+
+    <div class="hero-graphic">
+
+        <div class="hero-icon">
+            💻
+        </div>
+
+        <h2>
+            Programming
+        </h2>
+
+        <p>
+            Learn • Practice • Improve
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     MATERIALS
+========================= -->
+
+<section
+    class="section"
+    id="materials">
+
+    <div class="section-heading">
+
+        <div class="mini">
+            📚 STUDY MATERIAL
+        </div>
+
+        <h2>
+            Your <span>PDF Notes</span>
+        </h2>
+
+        <p>
+            Open your learning material directly
+            from your phone or computer.
+        </p>
+
+    </div>
+
+
+    <div class="material-card">
+
+        <div class="material-top">
+
+            <div class="pdf-icon">
+                📄
+            </div>
+
+            <div class="material-info">
+
+                <h3>
+                    Arrays and Linked Lists
+                </h3>
+
+                <p>
+                    Data Structures learning material
+                </p>
+
+                <div class="topic-tags">
+
+                    <span class="topic-tag">
+                        Arrays
+                    </span>
+
+                    <span class="topic-tag">
+                        Linked Lists
+                    </span>
+
+                    <span class="topic-tag">
+                        Stacks
+                    </span>
+
+                    <span class="topic-tag">
+                        Queues
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="material-buttons">
+
+            <button
+                class="button view-pdf"
+                onclick="openPDF()">
+
+                👀 View PDF
+
+            </button>
+
+
+            <a
+                class="button download-pdf"
+                href="Arrays%20and%20Linked%20Lists.pdf"
+                download>
+
+                ⬇ Download PDF
+
+            </a>
+
+        </div>
+
+
+        <!-- PDF VIEWER -->
+
+        <div
+            class="pdf-viewer-box"
+            id="pdfViewerBox">
+
+            <div class="viewer-top">
+
+                <h3>
+                    📖 Arrays and Linked Lists.pdf
+                </h3>
+
+                <button
+                    class="close-button"
+                    onclick="closePDF()">
+
+                    ✕ Close
+
+                </button>
+
+            </div>
+
+
+            <iframe
+                id="pdfFrame"
+                class="pdf-frame">
+            </iframe>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     VIDEOS
+========================= -->
+
+<section
+    class="section"
+    id="videos">
+
+    <div class="section-heading">
+
+        <div class="mini">
+            🎬 VIDEO LESSONS
+        </div>
+
+        <h2>
+            Learn With <span>Videos</span>
+        </h2>
+
+        <p>
+            Watch the lessons directly from the website.
+        </p>
+
+    </div>
+
+
+    <div class="video-grid">
+
+
+        <!-- VIDEO 1 -->
+
+        <div class="video-card">
+
+            <iframe
+                src="https://www.youtube.com/embed/IqQ7QpmiBJ0"
+                title="Programming Video 1"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+            </iframe>
+
+            <div class="video-info">
+
+                <h3>
+                    🎬 Video Lesson 01
+                </h3>
+
+                <p>
+                    Watch the first programming
+                    and data structures lesson.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- VIDEO 2 -->
+
+        <div class="video-card">
+
+            <iframe
+                src="https://www.youtube.com/embed/KiB0vRi2wlc"
+                title="Programming Video 2"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+            </iframe>
+
+            <div class="video-info">
+
+                <h3>
+                    🎬 Video Lesson 02
+                </h3>
+
+                <p>
+                    Continue learning with the
+                    second programming lesson.
+                </p>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     TOPICS
+========================= -->
+
+<section
+    class="section"
+    id="topics">
+
+    <div class="section-heading">
+
+        <div class="mini">
+            🧠 WHAT YOU CAN LEARN
+        </div>
+
+        <h2>
+            Data Structures <span>Topics</span>
+        </h2>
+
+    </div>
+
+
+    <div class="topic-grid">
+
+
+        <div class="topic">
+
+            <div class="topic-number">
+                01
+            </div>
+
+            <h3>
+                📦 Arrays
+            </h3>
+
+            <p>
+                Learn how data can be stored
+                and accessed using arrays.
+            </p>
+
+        </div>
+
+
+        <div class="topic">
+
+            <div class="topic-number">
+                02
+            </div>
+
+            <h3>
+                🔗 Linked Lists
+            </h3>
+
+            <p>
+                Understand nodes, links and
+                how linked lists store data.
+            </p>
+
+        </div>
+
+
+        <div class="topic">
+
+            <div class="topic-number">
+                03
+            </div>
+
+            <h3>
+                📚 Stacks
+            </h3>
+
+            <p>
+                Learn the LIFO concept,
+                including PUSH and POP.
+            </p>
+
+        </div>
+
+
+        <div class="topic">
+
+            <div class="topic-number">
+                04
+            </div>
+
+            <h3>
+                🚶 Queues
+            </h3>
+
+            <p>
+                Learn the FIFO concept,
+                including ENQUEUE and DEQUEUE.
+            </p>
+
+        </div>
+
+
+        <div class="topic">
+
+            <div class="topic-number">
+                05
+            </div>
+
+            <h3>
+                🔍 Searching
+            </h3>
+
+            <p>
+                Explore techniques for
+                finding information in data.
+            </p>
+
+        </div>
+
+
+        <div class="topic">
+
+            <div class="topic-number">
+                06
+            </div>
+
+            <h3>
+                ⚡ Algorithms
+            </h3>
+
+            <p>
+                Understand how algorithms
+                process and solve problems.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <p>
+        💙 <strong>Programming Learning Hub</strong>
+    </p>
+
+    <p>
+        Learn • Practice • Improve
+    </p>
+
+</footer>
+
+
+
+<script>
+
+/* =========================
+   MOBILE MENU
+========================= */
+
+function toggleMenu() {
+
+    const navigation =
+        document.getElementById("navigation");
+
+    navigation.classList.toggle("show");
+
+}
+
+
+/* =========================
+   OPEN PDF
+========================= */
+
+function openPDF() {
+
+    const viewerBox =
+        document.getElementById("pdfViewerBox");
+
+    const frame =
+        document.getElementById("pdfFrame");
+
+
+    /*
+       Your exact PDF filename
+    */
+
+    frame.src =
+        "Arrays%20and%20Linked%20Lists.pdf";
+
+
+    viewerBox.style.display =
+        "block";
+
+
+    viewerBox.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+    });
+
+}
+
+
+/* =========================
+   CLOSE PDF
+========================= */
+
+function closePDF() {
+
+    const viewerBox =
+        document.getElementById("pdfViewerBox");
+
+    const frame =
+        document.getElementById("pdfFrame");
+
+
+    viewerBox.style.display =
+        "none";
+
+
+    frame.src = "";
+
+}
+
+</script>
+
+
+</body>
+</html>
